@@ -14,12 +14,6 @@ class BoardsController < ApplicationController
 
     @the_board = matching_boards.at(0)
 
-    matching_posts = Post.all
-
-    @list_of_posts = matching_posts.order({ :created_at => :desc })
-
-    @the_post = matching_posts.at(0)
-
     render({ :template => "boards/show" })
   end
 
